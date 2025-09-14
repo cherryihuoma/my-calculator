@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0d0d0d; /* almost black */
+  color: #fff;
+}
+
+.calculator {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(220, 20, 60, 0.6); /* cherry glow */
+}
+
+#display {
+  width: 100%;
+  height: 70px;
+  margin-bottom: 20px;
+  font-size: 28px;
+  text-align: right;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: #000;
+  color: #ff4d6d; /* cherry red text */
+  box-shadow: inset 0 0 10px rgba(255, 77, 109, 0.3);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  gap: 12px;
+}
+
+.btn {
+  padding: 22px;
+  font-size: 20px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  background: #262626;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.5);
+}
+
+.btn:hover {
+  background: #ff4d6d;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(255, 77, 109, 0.8);
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+.equal {
+  background: #ff1a4d;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(255, 26, 77, 0.6);
+}
+
+.equal:hover {
+  background: #e60039;
+  box-shadow: 0 0 20px rgba(255, 26, 77, 0.9);
+}
+/* 🌙 Theme Toggle Button */
+#toggle-theme {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: #ff4d6d;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 77, 109, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+#toggle-theme:hover {
+  background: #e60039;
+  box-shadow: 0 0 15px rgba(255, 77, 109, 0.8);
+}
+
+/* ☀️ Light Mode */
+body.light {
+  background: #f2f2f2;
+  color: #111;
+}
+
+body.light .calculator {
+  background: #fff;
+  box-shadow: 0 0 25px rgba(255, 77, 109, 0.2);
+}
+
+body.light #display {
+  background: #f9f9f9;
+  color: #e60039; /* cherry stays */
+  box-shadow: inset 0 0 8px rgba(230, 0, 57, 0.2);
+}
+
+body.light .btn {
+  background: #f0f0f0;
+  color: #111;
+}
+
+body.light .btn:hover {
+  background: #ff4d6d;
+  color: white;
+  box-shadow: 0 0 12px rgba(255, 77, 109, 0.8);
+}
+
+body.light .equal {
+  background: #ff1a4d;
+  color: white;
+}
